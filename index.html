@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>BEM vs. Atomic CSS</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/league.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Custom Stylesheets -->
+	<link rel="stylesheet" href="lib/css/custom.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div class="container-row container-row--sa">
+					<img src="lib/image/bem.png" width="300" height="300" alt="BEM Logo">
+					<h2 class="fx-align-self--center">VS.</h2>
+					<img src="lib/image/atomic.png" width="300" height="300" alt="Atomic CSS Logo">
+				</div>
+			</section>
+			<section class="height100">
+				<div class="container-column">
+					<h2>Probleme</h2>
+					<div class="container-row container-row--sa">
+						<div class="border margin10 width50 p5">
+							<ul>
+								<li>CSS ist mächtig aber oft unberechenbar </li>
+								<li>Kaskadierung/Vererbung</li>
+								<li>Spezifität</li>
+								<li>Viele Abhängigkeiten von HTML an einer CSS Klasse</li>
+							</ul>
+						</div>
+						<img src="https://media.giphy.com/media/5pxnxdzdZfXFK/giphy.gif" width="300" height="250">
+					</div>
+				</div>
+			</section>
+			<section class="height100">
+				<h2>CSS nach Wiederverwendbarkeit</h2>
+				<div class="container-column">
+					<div class="container-row container-row--fs border margin10 width90 p5">
+						<ul class="text-align--left">
+							<li>Kaskadierung sinkt</li>
+							<li>Spezifität sinkt</li>
+							<li>Abstraktion steigt</li>
+						</ul>
+					</div>
+					<img src="lib/image/reusable.png">
+				</div>
+			</section>
+			<section class="height100">
+				<div class="container-column">
+					<h2>BEM</h2>
+					<img src="lib/image/bem.png" width="380" height="380" alt="BEM Logo">
+				</div>
+			</section>
+			<section class="height100">
+				<div class="container-column">
+					<h2>BEM</h2>
+					<div class="container-row container-row--sa">
+						<div class="border margin10 width50 p5">
+							<ul>
+								<li>Namenskonvention</li>
+								<li>Block-Element-Modifier</li>
+							</ul>
+						</div>
+
+						<img src="lib/image/bem-example.png" width="400" height="250">
+					</div>
+				</div>
+
+			</section>
+			<section>
+				<section class="height100">
+					<h2>BEM</h2>
+					<div class="container-row container-row--sa">
+						<div class="border margin10 width50 p5">
+							<h3>PRO'S:</h3>
+							<ul>
+								<li>Trennung von HTML -Namen und CSS</li>
+								<li>übersichtliche Benennung innerhalb eines Blocks</li>
+								<li>Verhindert ungewollte Kaskadierung </li>
+							</ul>
+						</div>
+						<div class="border margin10 width50 p5">
+							<h3>CON'S:</h3>
+							<ul>
+								<li>Aufgeblähte CSS-Dateien</li>
+								<ul>
+									<li>gelöst durch SCSS</li>
+									<li>durch Minifying</li>
+								</ul>
+								<li>“hässliches” HTML</li>
+								<ul>
+									<li>stört nicht den Endnutzer</li>
+								</ul>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="height100">
+					<h2>BEM</h2>
+					<div class="container-row container-row--sa">
+						<div class="border margin10 width50 p5">
+							<h3>PRO'S:</h3>
+							<ul>
+								<li>Trennung von HTML -Namen und CSS</li>
+								<li>übersichtliche Benennung innerhalb eines Blocks</li>
+								<li>Verhindert ungewollte Kaskadierung </li>
+							</ul>
+						</div>
+						<img src="https://media.giphy.com/media/6brH8dM3zeMyA/giphy.gif" width="300" height="300">
+					</div>
+				</section>
+			</section>
+			<section class="height100">
+				<h2>Atomic CSS</h2>
+				<img src="lib/image/atomic.png" width="380" height="380">
+			</section>
+			<section class="height100">
+				<h2>Atomic CSS</h2>
+				<div class="container-row container-row--sa">
+					<div class="border margin10 width50 p5">
+						<ul>
+							<li>Namenskonvention</li>
+							<li>Klassen bleiben unverändert</li>
+						</ul>
+					</div>
+					<img src="lib/image/atomic-example.png" width="400" height="250">
+				</div>
+			</section>
+			<section class="height100">
+				<h2>Atomic CSS</h2>
+				<div class="container-row container-row--sa">
+					<div class="border margin10 width50 p5">
+						<h3>PRO'S:</h3>
+						<ul>
+							<li>keine ungewollten Funktionen</li>
+							<li>kurz aber aussagekräftig</li>
+							<ul>
+								<li>wenn man die Eigenschaft ableiten kann</li>
+							</ul>
+						</ul>
+					</div>
+					<div class="border margin10 width50 p5">
+						<h3>CON'S:</h3>
+						<ul>
+							<li>Abkürzungen</li>
+							<li>Style-Änderungen für einzelne Elemente durchführen</li>
+							<ul>
+								<li>Balance zwischen Abstraktion und Spezifität finden</li>
+							</ul>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<section class="height100">
+					<h2>Fazit</h2>
+					<div class="container-row container-row--sa">
+						<div class="border margin10 width50 p5">
+							<ul>
+								<li>optimale Lösung durch sinnvolle Mischung</li>
+								<li>zentrale Regelungen wie Farbe, Margin, Padding über Atomic</li>
+								<li>Komponenten Styling nach BEM</li>
+							</ul>
+						</div>
+						<img src="https://media.giphy.com/media/JBAlpdjgeEeJ2/giphy.gif">
+					</div>
+				</section>
+				<section class="height100">
+					<h2>Fazit</h2>
+					<div class="container-row container-row--sa">
+						<div class="border margin10 width50 p5">
+							<h3>Ergebnis:</h3>
+							<ul>
+								<li>einheitliche Grundvorrausetzungen</li>
+								<li>eindeutige Einstellungen kurz gefasst(margin --> m)</li>
+								<li>spezifisches ausgeschrieben und eindeutig</li>
+								<li>löst die genannten Probleme im Groben</li>
+							</ul>
+						</div>
+						<img src="https://media.giphy.com/media/iEs4yXq5rVlL2/giphy.gif" width="400" height="250">
+					</div>
+
+				</section>
+
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>

@@ -48,9 +48,18 @@
 }
 
 li {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .p5 {
     padding: 5px;
+}
+
+.table {
+    max-width: 100%;
+    font-size: 1.5rem;
+}
+
+.text-small {
+    font-size: 0.5rem;
 }

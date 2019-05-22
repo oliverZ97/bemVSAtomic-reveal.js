@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>BEM vs. Atomic CSS</title>
+	<title>BEM vs. Atomic CSS vs. OOCSS</title>
 
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/reveal.css">
@@ -31,6 +31,9 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
+				<div>
+					<img src="lib/image/oocss.png" width="400" height="200" alt="OOCSS Logo">
+				</div>
 				<div class="container-row container-row--sa">
 					<img src="lib/image/bem.png" width="300" height="300" alt="BEM Logo">
 					<h2 class="fx-align-self--center">VS.</h2>
@@ -43,10 +46,14 @@
 					<div class="container-row container-row--sa">
 						<div class="border margin10 width50 p5">
 							<ul>
+								<li>Übersichtlichkeit</li>
+								<li>Wiederverwendbarkeit</li>
+								<li>Kaskadierung vermeiden</li>
+								<li>Abhängigkeit</li>
+								<li>tiefe Spezifität</li>
+								<li>kleine Dateien</li>
+								<li>Performance-Hürde</li>
 								<li>CSS ist mächtig aber oft unberechenbar </li>
-								<li>Kaskadierung/Vererbung</li>
-								<li>Spezifität</li>
-								<li>Viele Abhängigkeiten von HTML an einer CSS Klasse</li>
 							</ul>
 						</div>
 						<img src="https://media.giphy.com/media/5pxnxdzdZfXFK/giphy.gif" width="300" height="250">
@@ -54,7 +61,7 @@
 				</div>
 			</section>
 			<section class="height100">
-				<h2>CSS nach Wiederverwendbarkeit</h2>
+				<h2>Trennung HTML und CSS</h2>
 				<div class="container-column">
 					<div class="container-row container-row--fs border margin10 width90 p5">
 						<ul class="text-align--left">
@@ -64,6 +71,43 @@
 						</ul>
 					</div>
 					<img src="lib/image/reusable.png">
+				</div>
+			</section>
+			<section class="height100">
+				<h2>OOCSS</h2>
+				<img src="lib/image/oocss.png" width="400" height="200">
+			</section>
+			<section class="height100">
+				<h2>OOCSS</h2>
+				<div class="container-row container-row--sa">
+					<div class="border margin10 width50 p5">
+						<ul>
+							<li>folgt nur zwei Hauptregeln</li>
+							<li>1. Struktur von Aussehen trennen</li>
+							<li>2. Container von Inhalt trennen</li>
+						</ul>
+					</div>
+					<img src="lib/image/oocss-example.png" width="400" height="250">
+				</div>
+			</section>
+			<section class="height100">
+				<h2>OOCSS</h2>
+				<div class="container-row container-row--sa">
+					<div class="border margin10 width50 p5">
+						<h3>PRO'S:</h3>
+						<ul>
+							<li>Großteil wiederverwendbar</li>
+							<li>kleinere Dateien</li>
+							<li>Schnell zu laden</li>
+						</ul>
+					</div>
+					<div class="border margin10 width50 p5">
+						<h3>CON'S:</h3>
+						<ul>
+							<li>schnell hohe Spezifität</li>
+							<li>ab bestimmter Spezifität unübersichtlich</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 			<section class="height100">
@@ -88,49 +132,30 @@
 				</div>
 
 			</section>
-			<section>
-				<section class="height100">
-					<h2>BEM</h2>
-					<div class="container-row container-row--sa">
-						<div class="border margin10 width50 p5">
-							<h3>PRO'S:</h3>
-							<ul>
-								<li>Trennung von HTML -Namen und CSS</li>
-								<li>übersichtliche Benennung innerhalb eines Blocks</li>
-								<li>Verhindert ungewollte Kaskadierung </li>
-							</ul>
-						</div>
-						<div class="border margin10 width50 p5">
-							<h3>CON'S:</h3>
-							<ul>
-								<li>Aufgeblähte CSS-Dateien</li>
-								<ul>
-									<li>gelöst durch SCSS</li>
-									<li>durch Minifying</li>
-								</ul>
-								<li>“hässliches” HTML</li>
-								<ul>
-									<li>stört nicht den Endnutzer</li>
-								</ul>
-							</ul>
-						</div>
+			<section class="height100">
+				<h2>BEM</h2>
+				<div class="container-row container-row--sa">
+					<div class="border margin10 width50 p5">
+						<h3>PRO'S:</h3>
+						<ul>
+							<li>Trennung von HTML-Namen und CSS</li>
+							<li>übersichtliche Benennung innerhalb eines Blocks</li>
+							<li>Verhindert ungewollte Kaskadierung</li>
+							<li>Ermöglicht spezifischen Zugriff auf Element</li>
+						</ul>
 					</div>
-				</section>
-
-				<section class="height100">
-					<h2>BEM</h2>
-					<div class="container-row container-row--sa">
-						<div class="border margin10 width50 p5">
-							<h3>PRO'S:</h3>
+					<div class="border margin10 width50 p5">
+						<h3>CON'S:</h3>
+						<ul>
+							<li>Aufgeblähte CSS-Dateien</li>
 							<ul>
-								<li>Trennung von HTML -Namen und CSS</li>
-								<li>übersichtliche Benennung innerhalb eines Blocks</li>
-								<li>Verhindert ungewollte Kaskadierung </li>
+								<li>gelöst durch SCSS</li>
+								<li>durch Minifying</li>
 							</ul>
-						</div>
-						<img src="https://media.giphy.com/media/6brH8dM3zeMyA/giphy.gif" width="300" height="300">
+							<li>Kann Performance kosten</li>
+						</ul>
 					</div>
-				</section>
+				</div>
 			</section>
 			<section class="height100">
 				<h2>Atomic CSS</h2>
@@ -157,21 +182,22 @@
 					<div class="border margin10 width50 p5">
 						<h3>PRO'S:</h3>
 						<ul>
-							<li>keine ungewollten Funktionen</li>
-							<li>kurz aber aussagekräftig</li>
-							<ul>
-								<li>wenn man die Eigenschaft ableiten kann</li>
-							</ul>
+							<li>Keine ungewollten Funktionen</li>
+							<li>Wiederverwendbar</li>
+							<li>Kein ungenutzter Code</li>
+							<li>Schnell zu laden</li>
 						</ul>
 					</div>
 					<div class="border margin10 width50 p5">
 						<h3>CON'S:</h3>
 						<ul>
-							<li>Abkürzungen</li>
+							<li>Unübersichtlich durch Abkürzungen</li>
 							<li>Style-Änderungen für einzelne Elemente durchführen</li>
 							<ul>
 								<li>Balance zwischen Abstraktion und Spezifität finden</li>
 							</ul>
+							<li>kein spezifischer Zugriff nötig</li>
+							<li>viele HTML-Klassen abhängig</li>
 						</ul>
 					</div>
 				</div>
@@ -180,14 +206,71 @@
 				<section class="height100">
 					<h2>Fazit</h2>
 					<div class="container-row container-row--sa">
+						<table class="table">
+							<th>Problem</th>
+							<th>OOCSS</th>
+							<th>BEM</th>
+							<th>Atomic CSS</th>
+							<tr>
+								<td>Übersichtlichkeit</td>
+								<td>teilweise</td>
+								<td>ja</td>
+								<td>nein</td>
+							</tr>
+							<tr>
+								<td>Wiederverwendbarkeit</td>
+								<td>teilweise</td>
+								<td>teilweise</td>
+								<td>ja</td>
+							</tr>
+							<tr>
+								<td>Kaskadierung vermeiden</td>
+								<td>ja</td>
+								<td>ja</td>
+								<td>nein</td>
+							</tr>
+							<tr>
+								<td>tiefe Spezifität</td>
+								<td>teilweise</td>
+								<td>teilweise</td>
+								<td>nein</td>
+							</tr>
+							<tr>
+								<td>kleine Dateien</td>
+								<td>ja</td>
+								<td>teilweise</td>
+								<td>ja</td>
+							</tr>
+							<tr>
+								<td>gute Performance</td>
+								<td>teilweise</td>
+								<td>teilweise</td>
+								<td>ja</td>
+							</tr>
+							<tr>
+								<td>wenig Abhängigkeiten</td>
+								<td>ja</td>
+								<td>teilweise</td>
+								<td>teilweise</td>
+							</tr>
+						</table>
+
+					</div>
+					<p class="text-small">*Ergebnisse im Vergleich untereinander und spiegeln meine Meinung wieder</p>
+				</section>
+				<section class="height100">
+					<h2>Fazit</h2>
+					<div class="container-row container-row--sa">
 						<div class="border margin10 width50 p5">
+							<h3>Meinung</h3>
 							<ul>
+								<li>Verzicht auf OOCSS</li>
 								<li>optimale Lösung durch sinnvolle Mischung</li>
 								<li>zentrale Regelungen wie Farbe, Margin, Padding über Atomic</li>
 								<li>Komponenten Styling nach BEM</li>
 							</ul>
 						</div>
-						<img src="https://media.giphy.com/media/JBAlpdjgeEeJ2/giphy.gif">
+						<img src="https://media.giphy.com/media/JBAlpdjgeEeJ2/giphy.gif" width="400" height="250">
 					</div>
 				</section>
 				<section class="height100">
@@ -199,14 +282,14 @@
 								<li>einheitliche Grundvorrausetzungen</li>
 								<li>eindeutige Einstellungen kurz gefasst(margin --> m)</li>
 								<li>spezifisches ausgeschrieben und eindeutig</li>
-								<li>löst die genannten Probleme im Groben</li>
 							</ul>
 						</div>
 						<img src="https://media.giphy.com/media/iEs4yXq5rVlL2/giphy.gif" width="400" height="250">
 					</div>
-
 				</section>
-
+			</section>
+			<section class="height100">
+				<img src="https://media.giphy.com/media/XHVmD4RyXgSjd8aUMb/giphy.gif" width="600" height="450">
 			</section>
 		</div>
 	</div>
